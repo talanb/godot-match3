@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Scripts/board.gd" type="Script" id=1]
+
+[node name="Game" type="Node2D"]
+
+[node name="Board" type="Node2D" parent="."]
+
+script/script = ExtResource( 1 )
+
+
