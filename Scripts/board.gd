@@ -12,7 +12,7 @@ var grid = []
 
 func _ready():
 	randomize()
-#	seed(24)
+	seed(122)
 
 	initialize_grid()
 	pass
@@ -54,7 +54,7 @@ func clear_matches():
 				matchFound = true
 				for j in range(y, y+i):
 					grid[x][j].pattern = -1
-					grid[x][j].get_node("Sprite").set_texture(null)
+					grid[x][j].get_node("AnimationPlayer").play("fade")
 					
 	for y in range(grid_size.y):
 		for x in range(grid_size.x):
@@ -71,7 +71,7 @@ func clear_matches():
 				matchFound = true
 				for j in range(x, x+i):
 					grid[j][y].pattern = -1
-					grid[j][y].get_node("Sprite").set_texture(null)
+					grid[j][y].get_node("AnimationPlayer").play("fade")
 					
 #	# Drop tiles
 #	for y in range(grid_size.y - 1, 1, -1):
